@@ -1,7 +1,10 @@
-import {NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import MenuBarStyle from '../styles/MenuBarStyle.css';
+import { useParams } from 'react-router-dom';
 
-export default function MenuBar() {
+function MenuBar(props) {
+  const { id } = useParams();
+
   return (
     <nav>
       <ul id="menu">
@@ -20,3 +23,5 @@ export default function MenuBar() {
     </nav>
   );
 }
+
+export default MenuBar;
