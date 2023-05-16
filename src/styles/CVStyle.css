@@ -22,7 +22,7 @@
     right: 10px; /* Adjust as needed */
     top: 20px; /* Add a slight space at the top */
     margin-left: 1%; /* Set left margin to 1% */
-    border-radius: 5px;
+    border-radius: 8px;
     align-self: flex-start; /* Adjust height dynamically */
   }
   
