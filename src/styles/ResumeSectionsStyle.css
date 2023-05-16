@@ -11,17 +11,21 @@
     border-radius: 5px;
   }
   
-  .resume-section.selected {
+  .resume-section.selected,
+  .resume-section:hover {
     background-color: #0f0f0f;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 0 30px rgba(0, 0, 0, 0.1);
     transform: scale(1.01);
+    color: #4c6483;
+    text-decoration: underline;
   }
   
   .resume-section:not(:last-child) {
     margin-bottom: 25px;
   }
   
-  .resume-section:hover .section-title {
+  .resume-section:hover .section-title,
+  .resume-section.selected .section-title {
     color: #4c6483;
     text-decoration: underline;
   }
@@ -56,7 +60,6 @@
   .section-title {
     font-size: 150%;
     font-weight: bold;
-    color: white;
     text-align: center;
     transition: color 0.3s ease, text-decoration 0.3s ease;
   }

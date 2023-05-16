@@ -25,7 +25,7 @@ export default function Cv() {
             selectedSection={selectedSection}
           />
           <ResumeSections
-            title={"Publications"}
+            title={"Publications & Awards"}
             setSelectedSection={setSelectedSection}
             selectedSection={selectedSection}
           />
