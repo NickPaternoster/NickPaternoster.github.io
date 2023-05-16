@@ -1,6 +1,57 @@
-.name
-{
-    font-weight: bold;
-    font-size: 150%;
-    border-bottom: 1px solid black;
-}
+.text-resume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: black;
+    position: relative;
+  }
+  
+  .section-selection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center;
+    font-weight: bolder;
+    padding: 10px;
+    width: 15%;
+    background-color: #131313;
+    color: white;
+    position: absolute;
+    left: 0px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    top: 20px; /* Add a slight space at the top */
+    margin-left: 1%; /* Set left margin to 1% */
+    border-radius: 5px;
+    align-self: flex-start; /* Adjust height dynamically */
+  }
+  
+  .section-heads-resume {
+    display: flex;
+    font-size: 200%;
+    font-weight: bolder;
+  }
+  
+  .button {
+    background-color: #131313;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid #1a1a1a; /* Slightly lighter than the background */
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+
+    margin-bottom: 15px; /* Adjust bottom margin as needed */
+  }
+  
+  .button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.01);
+    border-color: white; /* Change border color on hover */
+  }
+  
+  .button:active {
+    background-color: #0f0f0f; /* Darken on click */
+  }
+  

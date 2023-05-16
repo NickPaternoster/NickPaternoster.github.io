@@ -8,7 +8,7 @@ function MenuBar(props) {
   return (
     <nav>
       <ul id="menu">
-        <li class="name">Nickolas Paternoster</li>
+        <li class="name">Nickolas Paternoster</li> 
 
         <li><NavLink exact to="/" activeClassName="active">Home</NavLink></li>
         <li><NavLink to="/about" activeClassName="active">About</NavLink></li>

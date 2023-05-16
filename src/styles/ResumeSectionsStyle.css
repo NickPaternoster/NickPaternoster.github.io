@@ -1,0 +1,63 @@
+.resume-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+    background-color: #131313;
+    cursor: pointer;
+    position: relative;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .resume-section.selected {
+    background-color: #0f0f0f;
+  }
+  
+  .resume-section:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  
+  .resume-section:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 0 30px rgba(0, 0, 0, 0.1);
+    transform: scale(1.01);
+  }
+  
+  .resume-section:hover .section-title {
+    color: #4c6483;
+    text-decoration: underline;
+  }
+  
+  .resume-section:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background-color: rgba(255, 255, 255, 0.05);
+    z-index: -1;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+  
+  .resume-section:hover:before {
+    opacity: 1;
+  }
+  
+  .section-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .section-title {
+    font-size: 150%;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+  }
+  
