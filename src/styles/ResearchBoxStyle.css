@@ -1,0 +1,36 @@
+.research-box {
+    width: auto;
+    height: 250px;
+    background-color: white;
+    cursor: pointer;
+    padding: 10px;
+    margin: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Slightly darker than white border */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .research-box:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.01);
+  }
+  
+  .box-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%; /* Add this line to specify the height */
+  }
+  
+  .research-image {
+    max-width: 100%; /* Change this to max-width */
+    max-height: 100%; /* Change this to max-height */
+    vertical-align: middle;
+  }
+  
+  .words {
+    flex: 1;
+    text-align: right;
+    margin-right: 10px;
+  }
+  
