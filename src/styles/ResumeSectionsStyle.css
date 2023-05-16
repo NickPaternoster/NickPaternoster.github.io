@@ -13,16 +13,12 @@
   
   .resume-section.selected {
     background-color: #0f0f0f;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 0 30px rgba(0, 0, 0, 0.1);
+    transform: scale(1.01);
   }
   
   .resume-section:not(:last-child) {
     margin-bottom: 25px;
-  }
-  
-  .resume-section:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 0 30px rgba(0, 0, 0, 0.1);
-    transform: scale(1.01);
-    border-radius: 5px; /* Add border radius on hover */
   }
   
   .resume-section:hover .section-title {
@@ -44,7 +40,8 @@
     border-radius: 5px;
   }
   
-  .resume-section:hover:before {
+  .resume-section:hover:before,
+  .resume-section.selected:before {
     opacity: 1;
   }
   

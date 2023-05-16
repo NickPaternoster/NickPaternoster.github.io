@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/ResumeSectionsStyle.css';
 
-const ResumeSection = ({ title }) => {
+const ResumeSection = ({ title, setSelectedSection, selectedSection }) => {
+  const isSelected = selectedSection === title;
+
   const handleClick = () => {
-    console.log('Box clicked!');
-    // Add your custom click event handling code here
+    setSelectedSection(title);
   };
 
   return (
-    <div className="resume-section" onClick={handleClick}>
+    <div
+      className={`resume-section ${isSelected ? 'selected' : ''}`}
+      onClick={handleClick}
+    >
       <div className="section-content">
         <div className="section-title">{title}</div>
       </div>
