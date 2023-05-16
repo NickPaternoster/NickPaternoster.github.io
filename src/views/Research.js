@@ -3,9 +3,9 @@ import ResearchBox from '../components/ResearchBox.js';
 
 export default function Research() {
   const boxes = [
-    { image: 'blur.png', title: 'Human Echolocation' },
-    { image: 'image2.jpg', title: 'Interaction of Semantic and Perceptual Information' },
-    { image: 'image3.jpg', title: 'Semantic Ensembles' }
+    { image: 'blur1.png', title: 'Human Echolocation' },
+    { image: 'semperc.png', title: 'The Size Congruity Effect' },
+    { image: 'ensemble.png', title: 'Semantic Ensembles' }
   ];
 
   return (
