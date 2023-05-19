@@ -1,0 +1,57 @@
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Set the height of the container to the full viewport height */
+  }
+  
+  .contact-container button {
+    margin-bottom: 10px; /* Add some space between the button and images */
+    margin-top: 2%;
+    border-radius: 50px;
+    padding: 10px 20px;
+    border: 1px solid black; /* Set the border style, width, and color */
+    background-color: transparent;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    width: 13%;
+    transition: transform 0.2s ease-in-out; /* Add transition effect */
+  }
+  
+  .contact-container button:hover {
+    opacity: 0.7; /* Reduce the opacity on hover */
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  
+  .contact-container button:active {
+    background-color: #888888; /* Adjust the color to your preference */
+  }
+  
+  .contact-container .image-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-container .image-container a {
+    margin-right: 10px; /* Add some space between the images */
+  }
+  
+  .contact-container .image-container a:last-child {
+    margin-bottom: 0; /* Remove bottom margin for the last image */
+  }
+  
+  .contact-container .image-container img {
+    width: 50px; /* Adjust the width to the desired size */
+    height: 50px; /* Adjust the height to the desired size */
+    transition: transform 0.2s ease-in-out; /* Add transition effect */
+  }
+  
+  .contact-container .image-container img:hover {
+    opacity: 0.7; /* Reduce the opacity on hover */
+    cursor: pointer;
+    transform: translateY(-5px); /* Move the image up by 5 pixels */
+  }
+  

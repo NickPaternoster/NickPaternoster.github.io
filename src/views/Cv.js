@@ -9,11 +9,18 @@ export default function Cv() {
   // Set the background color of the body element to black
   document.body.style.backgroundColor = 'black';
 
+  // Render the greeting when "Education" is selected
+  const renderGreeting = () => {
+    if (selectedSection === "Education") {
+      return <div>Hello</div>;
+    }
+    return null;
+  };
+
   return (
     <>
       <div className='text-resume'>
-        <div className='section-selection'>
-          <CV_Button></CV_Button>
+        <div className='section-selection'> 
           <ResumeSections
             title={"Overview"}
             setSelectedSection={setSelectedSection}
@@ -40,6 +47,8 @@ export default function Cv() {
             selectedSection={selectedSection}
           />
         </div>
+
+        {renderGreeting()}
       </div>
     </>
   );
