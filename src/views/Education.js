@@ -16,6 +16,9 @@ export default function About() {
       <div className="about-info">
         Primary Doctoral Advisor: Khena Swallow
       </div>
+      <div className="about-info">
+        Chair Members: TBA
+      </div>
 
       {/* Add an empty div for spacing */}
       <div className="degree-spacing"></div>
