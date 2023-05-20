@@ -6,6 +6,8 @@ import About from './views/About';
 import Research from './views/Research';
 import Cv from './views/Cv';
 import Contact from './views/Contact';
+import Education from './views/Education';
+import Skills from './views/Skills';
 import './styles/GeneralStyle.css'; // Import the CSS file
 
 function HomeRoute() {
@@ -23,14 +25,20 @@ function App() {
   return (
     <div className="app-container">
       <BrowserRouter>
-        <MenuBar />
-        <Routes>
-          <Route path="/" element={<HomeRoute />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/research" element={<Research />} />
-          <Route path="/cv" element={<Cv />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <div className="page-container">
+          <MenuBar />
+          <div className="content-container">
+            <Routes>
+              <Route path="/" element={<HomeRoute />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/research" element={<Research />} />
+              <Route path="/cv" element={<Cv />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/cv/education" element={<Education />} />
+              <Route path="/cv/skills" element={<Skills />} />
+            </Routes>
+          </div>
+        </div>
       </BrowserRouter>
     </div>
   );

@@ -12,7 +12,7 @@ export default function Home() {
       {isHome && (
         <>
           <div className="home-text">PhD Student: Cornell University</div>
-          <div className="sub-text">Cognition, Computation, Vision</div>
+          <div className="sub-text">Cognition, Computation, Perception</div>
         </>
       )}
       <img src="bfw2.png" alt="Stock intro" className="centered-image" />

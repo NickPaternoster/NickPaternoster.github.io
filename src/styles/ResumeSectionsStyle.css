@@ -16,7 +16,7 @@
   
   .resume-section.selected,
   .resume-section:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 0 30px rgba(0, 0, 0, 0.1);
+
     transform: scale(1.01);
     color: #4c6483;
     text-decoration: underline;

@@ -24,6 +24,13 @@
     background-color: #131313;
   }
   
+  .dropdown-menu {
+    display: none;
+  }
+  
+  .dropdown.open .dropdown-menu {
+    display: block;
+  }
   
   
   .section-heads-resume {
@@ -49,5 +56,25 @@
   
   .button:active {
     background-color: #0f0f0f; /* Darken on click */
+  }
+  
+
+  .degree-title {
+    margin-top: 3%;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 150%;
+    margin-left: 2%;
+  }
+
+  .about-info {
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 2%;
+  }
+  
+  .degree-spacing {
+    height: 8%; /* Adjust the height for desired spacing */
   }
   

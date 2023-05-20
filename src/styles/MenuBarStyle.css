@@ -1,55 +1,83 @@
-body {
-  margin: 0;
-  padding: 0;
-}
-
 nav {
   display: flex;
-  background: #131313;
+  flex-direction: column;
+  background: #2A2A2A;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-  padding-right: 20px; /* add padding to the right side */
-}
-
-.ico {
-  width: 25px;
-  height: auto;
+  width: 10%;
+  z-index: 9999;
+  margin-bottom: 0;
 }
 
 #menu {
   display: flex;
-  align-items: center;
-  flex-grow: 1;
+  flex-direction: column;
+  padding-left: 0;
+  margin-left: 0;
+  position: relative;
+  margin-bottom: auto; /* Push the menu to the top */
 }
 
 #menu .name {
-  margin-right: auto;
-  color: white;
+  color: #f5f5f5;
+  margin-bottom: 40%;
+  position: relative;
+}
+
+#menu .name:hover,
+#menu .name:active,
+#menu .name:focus {
+  color: #f5f5f5;
+}
+
+.name::after {
+  content: "";
+  position: absolute;
+  bottom: -25%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: grey;
 }
 
 #menu li {
   list-style: none;
-  padding: 0 20px;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 20px; /* add margin to the right side */
-}
-
-#menu li:last-child {
-  margin-right: 0; /* remove margin from the last item */
+  margin-bottom: 15%;
 }
 
 #menu li a {
   text-decoration: none;
   font-weight: normal;
-  color: white;
+  color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#menu li a:hover {
+  transition: opacity 0.3s ease;
   position: relative;
+  z-index: 1;
+}
+
+#menu li a:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
 }
 
 #menu li a:hover,
 #menu li a.active {
   color: #4c6483;
+  text-decoration: none;
 }
 
 #menu li a:before {
@@ -63,7 +91,34 @@ nav {
   transition: background-color 0.3s ease;
 }
 
-#menu li a:hover:before,
-#menu li a.active:before {
-  background: #4c6483;
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a.name {
+  color: #f5f5f5;
+}
+
+a.name:hover,
+a.name:active,
+a.name:focus {
+  color: #f5f5f5;
+}
+
+#menu li a img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+#menu .contact-line {
+  width: 100%;
+  height: 2px;
+  background-color: grey;
+  margin-top: auto; /* Push the line to the bottom */
+}
+
+#menu li:last-child {
+  margin-bottom: 250%; /* Push the last list item to the bottom */
 }
