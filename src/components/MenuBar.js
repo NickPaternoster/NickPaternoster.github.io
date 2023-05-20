@@ -64,9 +64,6 @@ function MenuBar(props) {
             </li>
           </ul>
         </li>
-      </ul>
-      <div className="contact-line"></div> {/* Add the line element */}
-      <ul id="menu">
         <li>
           <NavLink to="/contact" activeClassName="active">
             <img src="email.png" alt="Icon" /> Contact
