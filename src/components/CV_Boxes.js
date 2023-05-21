@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import '../styles/CV_BoxesStyle.css';
-import Modal from 'react-modal';
+import ModalComponent from './ModalComponent';
 
 const CV_Boxes = ({ title, description, image }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleClick = () => {
+  const handleBoxClick = () => {
     setIsOpen(true);
   };
 
@@ -13,34 +13,19 @@ const CV_Boxes = ({ title, description, image }) => {
     setIsOpen(false);
   };
 
-  const customModalStyles = {
-    content: {
-      width: '300px',
-      height: '200px',
-      margin: 'auto',
-    },
-    overlay: {
-      backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    },
-  };
-
   return (
-    <div className="cv-box" onClick={handleClick}>
-      <div className="box-content">
+    <div className="cv-box">
+      <div className="box-content" onClick={handleBoxClick}>
         <div className="box-title">{title}</div>
         <div className="box-description">{description}</div>
       </div>
 
-      <Modal
+      <ModalComponent
+        title={title}
+        description={description}
         isOpen={isOpen}
-        onRequestClose={closeModal}
-        style={customModalStyles}
-        contentLabel="Modal"
-      >
-        <h2>{title}</h2>
-        <p>{description}</p>
-        <button onClick={closeModal}>Close</button>
-      </Modal>
+        closeModal={closeModal}
+      />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-import MenuBarStyle from '../styles/MenuBarStyle.css';
+import '../styles/MenuBarStyle.css';
 
 function MenuBar(props) {
   const { id } = useParams();
@@ -15,7 +15,7 @@ function MenuBar(props) {
 
   // Function to toggle the visibility of the CV dropdown menu
   const toggleCVMenu = () => {
-    setIsCVMenuOpen(!isCVMenuOpen);
+    setIsCVMenuOpen(prevState => !prevState);
   };
   
   return (

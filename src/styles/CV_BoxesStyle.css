@@ -21,6 +21,7 @@
     justify-content: center; /* Center horizontally */
     margin-bottom: 1%; /* Adjust the vertical gap by modifying this value */
     box-sizing: border-box; /* Include padding in the box dimensions */
+    position: relative;
   }
   
   .cv-box:hover {
@@ -34,6 +35,11 @@
     justify-content: center;
     position: relative;
     height: 100%;
+    position: absolute; /* Add position: absolute */
+    top: 0; /* Position it at the top left corner */
+    left: 0;
+    right: 0; /* Take full width */
+    bottom: 0; /* Take full height */
   }
   
   .box-image {
