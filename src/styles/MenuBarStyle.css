@@ -1,7 +1,7 @@
 nav {
   display: flex;
   flex-direction: column;
-  background: #2A2A2A;
+  background: #202123;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
   width: 10%;
   z-index: 9999;

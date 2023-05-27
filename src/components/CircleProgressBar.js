@@ -1,11 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../styles/CircleProgressBar.css';
 
 const CircleProgressBar = ({ percentage, word }) => {
-  const radius = 40; // Adjust the radius of the circle
+  const [radius, setRadius] = useState(20);
   const circumference = 2 * Math.PI * radius;
-  const progressOffset = circumference - (percentage / 100) * circumference;
+  const progressOffset = circumference - (percentage / 110) * circumference;
   const strokeWidth = 2; // Adjust the stroke width
+
+  useEffect(() => {
+    const handleResize = () => {
+      const newRadius = Math.min(20, window.innerWidth * 0.03);
+      setRadius(newRadius);
+    };
+
+    handleResize(); // Initial calculation on component mount
+
+    window.addEventListener('resize', handleResize); // Update radius on window resize
+
+    return () => {
+      window.removeEventListener('resize', handleResize); // Cleanup event listener on component unmount
+    };
+  }, []);
 
   return (
     <svg className="circle-progress" width={radius * 2} height={radius * 2}>
@@ -25,16 +40,8 @@ const CircleProgressBar = ({ percentage, word }) => {
         strokeWidth={strokeWidth}
         strokeDasharray={`${circumference} ${circumference}`}
         strokeDashoffset={progressOffset}
+        transform={`rotate(0 ${radius} ${radius})`} // Modified transform
       />
-      <text
-        className="circle-progress-text"
-        x={radius}
-        y={radius}
-        textAnchor="middle"
-        dominantBaseline="middle"
-      >
-        {word}
-      </text>
     </svg>
   );
 };

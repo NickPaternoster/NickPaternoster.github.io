@@ -4,13 +4,14 @@
   justify-content: center;
   align-items: center;
   align-content: center; /* Center the wrapped rows vertically */
-  gap: 1%;
-  height: 100vh;
-  margin: -0.25% 0; /* Adjust the negative margin to compensate for the gaps */
+  gap: 0%;
+  height: auto; /* Remove fixed height to accommodate variable number of rows */
+  margin: -0.25% 10; /* Adjust the negative margin to compensate for the gaps */
+  margin-top: 10%;
 }
 
 .cv-box {
-  width: 22%; /* Adjust the width to increase the box size */
+  width: 30%; /* Adjust the width to distribute boxes in a three-by-three grid */
   height: 30vh; /* Adjust the height to increase the box size */
   background-color: white;
   cursor: pointer;
@@ -23,6 +24,10 @@
   margin-bottom: 1%; /* Adjust the vertical gap by modifying this value */
   margin-right: 1%; /* Adjust the horizontal gap by modifying this value */
 }
+
+/* Rest of the CSS remains the same */
+
+
 
 .cv-box:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -44,10 +49,34 @@
   object-fit: contain;
 }
 
+
 .box-title {
   flex: 1;
   text-align: center;
   font-weight: bold;
-  font-size: 150%;
+  font-size: 150%; /* Default font size */
   border-bottom: none;
+}
+
+/* Media queries for different screen sizes */
+@media screen and (max-width: 768px) {
+  .cv-box {
+    width: 45%; /* Adjust the width for smaller screens */
+    height: 20vh; /* Adjust the height for smaller screens */
+  }
+
+  .box-title {
+    font-size: 120%; /* Adjust font size for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cv-box {
+    width: 90%; /* Adjust the width for even smaller screens */
+    height: 15vh; /* Adjust the height for even smaller screens */
+  }
+
+  .box-title {
+    font-size: 100%; /* Adjust font size for even smaller screens */
+  }
 }

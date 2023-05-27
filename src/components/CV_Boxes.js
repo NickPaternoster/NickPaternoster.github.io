@@ -3,7 +3,7 @@ import '../styles/CV_BoxesStyle.css';
 import ModalComponent from './ModalComponent';
 import CircleProgressBar from './CircleProgressBar';
 
-const CV_Boxes = ({ title, description, image, experience }) => {
+const CV_Boxes = ({ title, description, image, experience, percentage, environment }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleBoxClick = () => {
@@ -23,6 +23,7 @@ const CV_Boxes = ({ title, description, image, experience }) => {
       <div className="box-content">
         <div className="box-title">{title}</div>
         <div className="box-description">{description}</div>
+        <img className="box-image" src={image} />
       </div>
 
       {isOpen && (
@@ -33,8 +34,10 @@ const CV_Boxes = ({ title, description, image, experience }) => {
               description={description}
               isOpen={isOpen}
               closeModal={closeModal}
+              experience={experience} // Pass the experience prop
+              environment= {environment} // Pass the environment prop
             >
-              <CircleProgressBar percentage={75} word={experience} />
+              <CircleProgressBar percentage={percentage} word={experience} />
             </ModalComponent>
           </div>
         </div>
