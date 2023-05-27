@@ -1,0 +1,33 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column */
+    grid-template-rows: auto 1fr; /* Auto height for text, 1fr for image */
+    gap: 10px; /* Gap between grid items */
+    height: 100vh; /* Adjust the height to fill the viewport */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+  }
+  
+  .about-info {
+    display: flex;
+    flex-direction: column;
+    font-size: larger;
+    justify-content: center;
+    margin: 18%;
+    line-height: 1.5;
+  }
+  
+  .image-container-1 {
+    grid-row: 2; /* Second row */
+    display: flex; /* Add flex display */
+    align-items: center; /* Center the image vertically */
+    justify-content: center; /* Center the image horizontally */
+    overflow: hidden; /* Hide overflowing image */
+  }
+  
+  .image-container-1 img {
+    width: 100%; /* Set width to 100% */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+    object-fit: cover; /* Cover the entire container with the image */
+  }
+  

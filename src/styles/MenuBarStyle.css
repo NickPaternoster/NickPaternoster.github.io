@@ -2,13 +2,14 @@ nav {
   display: flex;
   flex-direction: column;
   background: #202123;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-  width: 10%;
+  box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.2); /* Updated box shadow */
+  width: 20vh;
   z-index: 9999;
   margin-bottom: 0;
   height: 100vh;
   overflow: hidden; /* Hide any overflow */
 }
+
 
 #menu {
   display: flex;
@@ -18,6 +19,7 @@ nav {
   position: relative;
   margin-bottom: auto; /* Push the menu to the top */
   flex-grow: 1; /* Allow the menu to grow and take remaining vertical space */
+  overflow-y: auto; /* Add vertical scrolling to the menu */
 }
 
 #menu .name {
@@ -30,6 +32,7 @@ nav {
 #menu .name:active,
 #menu .name:focus {
   color: #f5f5f5;
+  text-decoration: none; /* Remove underline on hover and active */
 }
 
 .name::after {
@@ -99,14 +102,43 @@ body {
   padding: 0;
 }
 
-a.name {
-  color: #f5f5f5;
+#menu .dropdown-menu li:first-child a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #4c6483;
 }
 
-a.name:hover,
-a.name:active,
-a.name:focus {
-  color: #f5f5f5;
+#menu .dropdown-menu li:first-child a:hover::before {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #4c6483;
+}
+
+#menu .dropdown-menu li:first-child a.active {
+  color: #4c6483;
+}
+
+#menu .dropdown-menu li:first-child a.active::before {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+#menu li:first-child a {
+  color: #f5f5f5 !important;
+}
+
+#menu li:first-child a:hover,
+#menu li:first-child a:active,
+#menu li:first-child a:focus {
+  color: #f5f5f5 !important;
+}
+
+#menu li:first-child a::before {
+  background-color: transparent !important;
+}
+
+#menu li:first-child a:hover::before,
+#menu li:first-child a.active::before {
+  background-color: transparent !important;
 }
 
 #menu li a img {
@@ -116,12 +148,18 @@ a.name:focus {
   filter: invert(1);
 }
 
+#menu li a:hover img,
+#menu li a.active img {
+  filter: invert(80%) brightness(1.2) saturate(80%) sepia(100%) hue-rotate(180deg); /* Apply filter to make the image blue and keep it inverted */
+}
+
+
+
 
 #menu .contact-line {
   width: 100%;
   height: 2px;
   background-color: grey;
-
 }
 
 #menu li:last-child {

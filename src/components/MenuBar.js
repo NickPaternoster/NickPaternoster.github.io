@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 import '../styles/MenuBarStyle.css';
+import homeIcon from '../images/home.png';
+import infoIcon from '../images/information-button.png';
+import brainIcon from '../images/brain.png';
+import resumeIcon from '../images/resume.png';
+import emailIcon from '../images/email.png';
 
 function MenuBar(props) {
   const { id } = useParams();
+  const location = useLocation();
 
   const activeLinkStyle = {
     textDecoration: 'none',
@@ -17,56 +23,58 @@ function MenuBar(props) {
   const toggleCVMenu = () => {
     setIsCVMenuOpen(prevState => !prevState);
   };
-  
+
+  // Function to check if the link should be active
+  const isActiveLink = (path) => {
+    return path === '/' && id && location.pathname !== '/'; // Exclude "Nickolas Paternoster" link
+  };
+
   return (
     <nav>
       <ul id="menu">
         <li className="name">
-          <NavLink exact to="/" activeClassName="active"> Nickolas Paternoster
+          <NavLink exact to="/" activeClassName={isActiveLink('/') ? '' : 'active'} style={activeLinkStyle}>
+            Nickolas Paternoster
           </NavLink>
         </li>
         <li>
           <NavLink exact to="/" activeClassName="active">
-            <img src="home.png" alt="Icon" /> Home
+            <img src={homeIcon} alt="Icon" /> Home
           </NavLink>
         </li>
         <li>
           <NavLink exact to="/about" activeClassName="active">
-            <img src="information-button.png" alt="Icon" /> About
+            <img src={infoIcon} alt="Icon" /> About
           </NavLink>
         </li>
         <li>
           <NavLink to="/research" activeClassName="active">
-            <img src="brain.png" alt="Icon" /> Research
+            <img src={brainIcon} alt="Icon" /> Research
           </NavLink>
         </li>
         <li className={`dropdown ${isCVMenuOpen ? 'open' : ''}`}>
           <NavLink to="/cv" activeClassName="active" onClick={toggleCVMenu}>
-            <img src="resume.png" alt="Icon" /> CV
+            <img src={resumeIcon} alt="Icon" /> CV
             <span className="dropdown-icon">&#9662;</span>
           </NavLink>
           <ul className="dropdown-menu">
             <li>
-              <NavLink to="/cv/education" activeClassName="active">Education
-              </NavLink>
+              <NavLink to="/cv/education" activeClassName="active">Education</NavLink>
             </li>
             <li>
-              <NavLink to="/cv/pubs" activeClassName="active">Publications & Awards
-              </NavLink>
+              <NavLink to="/cv/pubs" activeClassName="active">Publications & Awards</NavLink>
             </li>
             <li>
-              <NavLink to="/cv/conferences" activeClassName="active"> Conferences
-              </NavLink>
+              <NavLink to="/cv/conferences" activeClassName="active">Conferences</NavLink>
             </li>
             <li>
-              <NavLink to="/cv/skills" activeClassName="active"> Skills
-              </NavLink>
+              <NavLink to="/cv/skills" activeClassName="active">Skills</NavLink>
             </li>
           </ul>
         </li>
         <li>
           <NavLink to="/contact" activeClassName="active">
-            <img src="email.png" alt="Icon" /> Contact
+            <img src={emailIcon} alt="Icon" /> Contact
           </NavLink>
         </li>
       </ul>

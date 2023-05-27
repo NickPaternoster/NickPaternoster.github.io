@@ -13,13 +13,10 @@ export default function Home() {
         <>
           <div className="home-text">PhD Student: Cornell University</div>
           <div className="sub-text">Cognition, Computation, Perception</div>
+          <NavLink exact to="/about" className="button-below-image">
+            Learn More
+          </NavLink>
         </>
-      )}
-      <img src="bfw2.png" alt="Stock intro" className="centered-image" />
-      {isHome && (
-              <NavLink exact to="/about" className="button-below-image">
-                <button className="button-below-image">Learn More</button>
-            </NavLink>
       )}
     </div>
   );

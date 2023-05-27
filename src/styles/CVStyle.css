@@ -57,27 +57,4 @@
   .button:active {
     background-color: #0f0f0f; /* Darken on click */
   }
-  
-
-  .degree-title {
-    margin-top: 10%;
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-    font-size: 150%;
-    margin-left: auto; /* Center horizontally */
-    margin-right: auto; /* Center horizontally */
-    text-align: center; /* Center text */
-  }
-  
-  .about-info {
-    display: block;
-    margin-bottom: 10px;
-    margin-left: auto; /* Center horizontally */
-    margin-right: auto; /* Center horizontally */
-    text-align: center; /* Center text */
-    font-size: 110%;
-  }
-  
-  
-  
+ 

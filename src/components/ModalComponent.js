@@ -73,6 +73,18 @@ const ModalComponent = ({
     marginLeft: '-5px', // Add left margin to separate from the label
   };
 
+  const paragraphStyles = {
+    marginTop: '10px', // Adjust the margin as per your requirement
+    marginLeft: '10%',
+    marginRight: '10%'
+  };
+
+  const titleStyles = {
+    fontWeight: 'bold',
+    fontSize: '16px',
+    marginBottom: '5px',
+  };
+
   return (
     <Modal
       isOpen={isOpen}
@@ -100,7 +112,18 @@ const ModalComponent = ({
           <p style={environmentTextStyles}>Environment: {environment}</p> {/* Add the "environment" text and value */}
         </div>
       </div>
-      <p>{description}</p>
+      <div style={paragraphStyles}>
+        <p style={titleStyles}>Summary</p>
+        <p>
+          I have extensive experience with C++. Over the past five years, I have worked on various projects ranging from small applications to large-scale systems using C++. I am proficient in object-oriented programming, data structures, and algorithms in C++. I have successfully implemented complex functionalities and optimized code for performance. Additionally, I am familiar with popular libraries and frameworks such as STL and Boost. My experience with C++ has allowed me to develop robust and efficient software solutions, and I continue to enhance my skills through ongoing learning and practical application.
+        </p>
+        <p style={titleStyles}>Projects</p>
+        <ul style={{ textAlign: 'left', paddingLeft: '20px' }}>
+          <li>Project 1: Developed a real-time image processing application using C++ and OpenCV library. Implemented various image enhancement and feature extraction algorithms.</li>
+          <li>Project 2: Created a simulation software for modeling and analyzing the behavior of a network using C++ and network simulation libraries.</li>
+          <li>Project 3: Contributed to the development of a high-performance game engine using C++ and DirectX graphics library.</li>
+        </ul>
+      </div>
     </Modal>
   );
 };
