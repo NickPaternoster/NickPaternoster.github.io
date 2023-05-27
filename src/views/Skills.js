@@ -4,7 +4,7 @@ import CVBoxes from '../components/CV_Boxes';
 export default function Skills() {
   return (
     <div className="cv-box-container">
-      <CVBoxes title="Python" />
+      <CVBoxes title="Python" experience = "skilled"/>
       <CVBoxes title="C++" />
       <CVBoxes title="MATLAB" />
       <CVBoxes title="C#" />

@@ -1,60 +1,53 @@
 .cv-box-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center the boxes horizontally */
-    align-items: center; /* Center the boxes vertically */
-    gap: 2%; /* Adjust the spacing between boxes */
-    height: 100vh; /* Set the container height to full viewport height */
-    margin: -1% 0;
-  }
-  
-  .cv-box {
-    width: 20%;
-    height: 250px; /* Adjust the height as per your requirement */
-    background-color: white;
-    cursor: pointer;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center horizontally */
-    margin-bottom: 1%; /* Adjust the vertical gap by modifying this value */
-    box-sizing: border-box; /* Include padding in the box dimensions */
-    position: relative;
-  }
-  
-  .cv-box:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    transform: scale(1.01);
-  }
-  
-  .box-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    height: 100%;
-    position: absolute; /* Add position: absolute */
-    top: 0; /* Position it at the top left corner */
-    left: 0;
-    right: 0; /* Take full width */
-    bottom: 0; /* Take full height */
-  }
-  
-  .box-image {
-    max-width: 100%;
-    max-height: 100%;
-    vertical-align: middle;
-    aspect-ratio: 1/1;
-    object-fit: contain;
-  }
-  
-  .box-title {
-    flex: 1;
-    text-align: center; /* Center the word */
-    font-weight: bold;
-    font-size: 150%;
-    border-bottom: none; /* Remove the underline */
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center; /* Center the wrapped rows vertically */
+  gap: 1%;
+  height: 100vh;
+  margin: -0.25% 0; /* Adjust the negative margin to compensate for the gaps */
+}
+
+.cv-box {
+  width: 22%; /* Adjust the width to increase the box size */
+  height: 30vh; /* Adjust the height to increase the box size */
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1%; /* Adjust the vertical gap by modifying this value */
+  margin-right: 1%; /* Adjust the horizontal gap by modifying this value */
+}
+
+.cv-box:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: scale(1.01);
+}
+
+.box-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.box-image {
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}
+
+.box-title {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+  font-size: 150%;
+  border-bottom: none;
+}

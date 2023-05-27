@@ -1,0 +1,26 @@
+.circle-progress {
+    display: block;
+  }
+  
+  
+  .circle-progress-background {
+    fill: none;
+    stroke: #e6e6e6; /* Background color */
+    stroke-width: 4; /* Adjust the stroke width */
+  }
+  
+  .circle-progress-bar {
+    fill: none;
+    stroke: #4c6483; /* Progress bar color */
+    stroke-width: 4; /* Adjust the stroke width */
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.3s ease;
+  }
+  
+  .circle-progress-text {
+    fill: #000; /* Text color */
+    font-size: 20px; /* Adjust the font size */
+    text-anchor: middle;
+  }
+  
+  

@@ -2,7 +2,7 @@ import React from 'react';
 import Modal from 'react-modal';
 import { Button } from 'react-bootstrap';
 
-const ModalComponent = ({ title, description, isOpen, closeModal }) => {
+const ModalComponent = ({ title, description, isOpen, closeModal, children }) => {
   const customModalStyles = {
     content: {
       width: '50%',
@@ -23,6 +23,7 @@ const ModalComponent = ({ title, description, isOpen, closeModal }) => {
     >
       <h2>{title}</h2>
       <p>{description}</p>
+      {children}
       <Button variant="primary" onClick={closeModal}>
         Close
       </Button>
