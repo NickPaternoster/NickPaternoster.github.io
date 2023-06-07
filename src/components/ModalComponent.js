@@ -43,9 +43,10 @@ const ModalComponent = ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between', // Add space between columns
-    marginTop: '0',
+    marginTop: '0.5%',
     marginBottom: '5px',
     width: '90%',
+    border: '1px solid black'
   };
 
   const skillLevelTextStyles = {
@@ -59,7 +60,7 @@ const ModalComponent = ({
   const columnStyles = {
     flex: 1, // Each column takes up equal width
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center', // Align content vertically in the middle
   };
@@ -76,14 +77,24 @@ const ModalComponent = ({
   const paragraphStyles = {
     marginTop: '10px', // Adjust the margin as per your requirement
     marginLeft: '10%',
-    marginRight: '10%'
+    marginRight: '10%',
   };
+
+  const titleContainerStyles = {
+    border: '1px solid black',
+    width: '90%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  };
+  
 
   const titleStyles = {
     fontWeight: 'bold',
-    fontSize: '16px',
-    marginBottom: '5px',
+    marginBottom: '0',
   };
+
+  let isFirstTitle = true; // Variable to check if it's the first title
 
   return (
     <Modal
@@ -95,11 +106,13 @@ const ModalComponent = ({
       <button style={closeButtonStyles} onClick={closeModal}>
         &times; {/* Use the &times; HTML entity for the "x" symbol */}
       </button>
-      <h2>{title}</h2>
+      <div style={titleContainerStyles}>
+        <h2 style={titleStyles}>{title}</h2>
+      </div>
       <div style={skillLevelContainerStyles}>
         <div style={columnStyles}>
           <div style={labelAndCircleStyles}>
-            <p style={skillLevelTextStyles}>Skill Level</p>
+            <p style={skillLevelTextStyles}>Proficiency</p>
             <div style={circleContainerStyles}>
               {children} {/* Render the circle element */}
             </div>
@@ -113,7 +126,7 @@ const ModalComponent = ({
         </div>
       </div>
       <div style={paragraphStyles}>
-        <p style={titleStyles}>Summary</p>
+        <p style={titleStyles}>Overview</p>
         <p>
           I have extensive experience with C++. Over the past five years, I have worked on various projects ranging from small applications to large-scale systems using C++. I am proficient in object-oriented programming, data structures, and algorithms in C++. I have successfully implemented complex functionalities and optimized code for performance. Additionally, I am familiar with popular libraries and frameworks such as STL and Boost. My experience with C++ has allowed me to develop robust and efficient software solutions, and I continue to enhance my skills through ongoing learning and practical application.
         </p>

@@ -8,6 +8,8 @@ import Cv from './views/Cv';
 import Contact from './views/Contact';
 import Education from './views/Education';
 import Skills from './views/Skills';
+import Pubs from './views/Pubs';
+import Awards from './views/Awards';
 import './styles/GeneralStyle.css'; // Import the CSS file
 
 function HomeRoute() {
@@ -36,6 +38,8 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/cv/education" element={<Education />} />
               <Route path="/cv/skills" element={<Skills />} />
+              <Route path="/cv/pubs" element={<Pubs />} />
+              <Route path="/cv/awards" element={<Awards />} />
             </Routes>
           </div>
         </div>

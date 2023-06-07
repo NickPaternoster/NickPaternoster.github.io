@@ -8,6 +8,7 @@
   height: auto; /* Remove fixed height to accommodate variable number of rows */
   margin: -0.25% 10; /* Adjust the negative margin to compensate for the gaps */
   margin-top: 10%;
+  
 }
 
 .cv-box {
@@ -23,6 +24,7 @@
   justify-content: center;
   margin-bottom: 1%; /* Adjust the vertical gap by modifying this value */
   margin-right: 1%; /* Adjust the horizontal gap by modifying this value */
+  font-family: 'Merriweather', serif;
 }
 
 /* Rest of the CSS remains the same */

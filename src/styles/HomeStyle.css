@@ -53,3 +53,23 @@
   margin-bottom: 1%;
   margin-top: -5%;
 }
+
+.fade-in {
+  opacity: 0;
+  animation: fade-in 1s forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.home-text,
+.sub-text,
+.button-below-image {
+  opacity: 0;
+}

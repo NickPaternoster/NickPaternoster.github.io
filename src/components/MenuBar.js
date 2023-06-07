@@ -58,14 +58,17 @@ function MenuBar(props) {
             <span className="dropdown-icon">&#9662;</span>
           </NavLink>
           <ul className="dropdown-menu">
+          <li>
+              <NavLink to="/cv" activeClassName="active">Home</NavLink>
+            </li>
             <li>
               <NavLink to="/cv/education" activeClassName="active">Education</NavLink>
             </li>
             <li>
-              <NavLink to="/cv/pubs" activeClassName="active">Publications & Awards</NavLink>
+              <NavLink to="/cv/pubs" activeClassName="active">Publications</NavLink>
             </li>
             <li>
-              <NavLink to="/cv/conferences" activeClassName="active">Conferences</NavLink>
+              <NavLink to="/cv/awards" activeClassName="active">Awards & Conferences</NavLink>
             </li>
             <li>
               <NavLink to="/cv/skills" activeClassName="active">Skills</NavLink>
