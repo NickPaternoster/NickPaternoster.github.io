@@ -7,6 +7,13 @@
   text-align: center;
 }
 
+.nav-buttons {
+  display: flex;
+  justify-content: center; 
+  gap: 1%; 
+  width: 150%;
+}
+
 .centered-image {
   max-width: calc(98vw - 10%);
   width: calc(98vw - 10%);

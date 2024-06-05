@@ -20,17 +20,37 @@ export default function Home() {
             Ph.D. Student: Cornell University
           </div>
           <div className={`sub-text ${shouldFadeIn ? 'fade-in' : ''}`}>
-            Cognition, Computation, Perception
+            Perception, Computation, & Cognition
           </div>
-          <NavLink
-            exact
-            to="/about"
-            className={`button-below-image ${
-              shouldFadeIn ? 'fade-in' : ''
-            }`}
-          >
-            Learn More
-          </NavLink>
+          <div className="nav-buttons">
+            <NavLink
+              exact
+              to="/about"
+              className={`button-below-image ${
+                shouldFadeIn ? 'fade-in' : ''
+              }`}
+            >
+              About Me
+            </NavLink>
+            <NavLink
+              exact
+              to="/research"
+              className={`button-below-image ${
+                shouldFadeIn ? 'fade-in' : ''
+              }`}
+            >
+              Research Interest
+            </NavLink>
+            <NavLink
+              exact
+              to="/cv"
+              className={`button-below-image ${
+                shouldFadeIn ? 'fade-in' : ''
+              }`}
+            >
+              Curriculum Vitae
+            </NavLink>
+          </div>
         </>
       )}
     </div>

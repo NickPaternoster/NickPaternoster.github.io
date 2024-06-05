@@ -18,12 +18,16 @@ function MenuBar(props) {
 
   // State to track the visibility of the CV dropdown menu
   const [isCVMenuOpen, setIsCVMenuOpen] = useState(false);
+  const [isResearchMenuOpen, setIsResearchMenuOpen] = useState(false);
 
   // Function to toggle the visibility of the CV dropdown menu
   const toggleCVMenu = () => {
     setIsCVMenuOpen(prevState => !prevState);
   };
 
+  const toggleResearchMenu = () => {
+    setIsResearchMenuOpen(prevState => !prevState);
+  };
   // Function to check if the link should be active
   const isActiveLink = (path) => {
     return path === '/' && id && location.pathname !== '/'; // Exclude "Nickolas Paternoster" link
@@ -47,10 +51,22 @@ function MenuBar(props) {
             <img src={infoIcon} alt="Icon" /> About
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/research" activeClassName="active">
+        <li className={`dropdown ${isResearchMenuOpen ? 'open' : ''}`}>
+          <NavLink to="/research" activeClassName="active" onClick={toggleResearchMenu}>
             <img src={brainIcon} alt="Icon" /> Research
+            <span className="dropdown-icon">&#9662;</span>
           </NavLink>
+          <ul className="dropdown-menu">
+            <li>
+              <NavLink to="/research/topic1" activeClassName="active">Topic 1</NavLink>
+            </li>
+            <li>
+              <NavLink to="/research/topic2" activeClassName="active">Topic 2</NavLink>
+            </li>
+            <li>
+              <NavLink to="/research/topic3" activeClassName="active">Topic 3</NavLink>
+            </li>
+          </ul>
         </li>
         <li className={`dropdown ${isCVMenuOpen ? 'open' : ''}`}>
           <NavLink to="/cv" activeClassName="active" onClick={toggleCVMenu}>
