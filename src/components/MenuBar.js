@@ -1,98 +1,121 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { useParams, useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import '../styles/MenuBarStyle.css';
 import homeIcon from '../images/home.png';
 import infoIcon from '../images/information-button.png';
 import brainIcon from '../images/brain.png';
 import resumeIcon from '../images/resume.png';
 import emailIcon from '../images/email.png';
+import teachingIcon from '../images/teaching.png';
 
-function MenuBar(props) {
-  const { id } = useParams();
+function MenuBar() {
   const location = useLocation();
 
-  const activeLinkStyle = {
-    textDecoration: 'none',
-  };
-
-  // State to track the visibility of the CV dropdown menu
   const [isCVMenuOpen, setIsCVMenuOpen] = useState(false);
   const [isResearchMenuOpen, setIsResearchMenuOpen] = useState(false);
+  const [isTeachingMenuOpen, setIsTeachingMenuOpen] = useState(false);
 
-  // Function to toggle the visibility of the CV dropdown menu
-  const toggleCVMenu = () => {
+  const toggleCVMenu = (e) => {
+    e.preventDefault();
     setIsCVMenuOpen(prevState => !prevState);
+    setIsResearchMenuOpen(false); 
+    setIsTeachingMenuOpen(false);
   };
 
-  const toggleResearchMenu = () => {
+  const toggleResearchMenu = (e) => {
+    e.preventDefault();
     setIsResearchMenuOpen(prevState => !prevState);
+    setIsCVMenuOpen(false);
+    setIsTeachingMenuOpen(false);
   };
-  // Function to check if the link should be active
+
+  const toggleTeachingMenu = (e) => {
+    e.preventDefault();
+    setIsTeachingMenuOpen(prevState => !prevState);
+    setIsCVMenuOpen(false);
+    setIsResearchMenuOpen(false);
+  };
+
+  const handleSubMenuClick = () => {
+    setIsCVMenuOpen(false);
+    setIsResearchMenuOpen(false);
+    setIsTeachingMenuOpen(false);
+  };
+
   const isActiveLink = (path) => {
-    return path === '/' && id && location.pathname !== '/'; // Exclude "Nickolas Paternoster" link
+    return location.pathname === path;
+  };
+
+  const isActiveSubLink = (subPaths) => {
+    return subPaths.includes(location.pathname);
   };
 
   return (
     <nav>
       <ul id="menu">
-        <li className="name">
-          <NavLink exact to="/" activeClassName={isActiveLink('/') ? '' : 'active'} style={activeLinkStyle}>
-            Nickolas Paternoster
-          </NavLink>
-        </li>
         <li>
-          <NavLink exact to="/" activeClassName="active">
+          <NavLink exact to="/" className={isActiveLink('/') ? 'active' : ''}>
             <img src={homeIcon} alt="Icon" /> Home
           </NavLink>
         </li>
         <li>
-          <NavLink exact to="/about" activeClassName="active">
+          <NavLink exact to="/about" className={isActiveLink('/about') ? 'active' : ''}>
             <img src={infoIcon} alt="Icon" /> About
           </NavLink>
         </li>
         <li className={`dropdown ${isResearchMenuOpen ? 'open' : ''}`}>
-          <NavLink to="/research" activeClassName="active" onClick={toggleResearchMenu}>
+          <a href="#" onClick={toggleResearchMenu} className={isActiveSubLink(['/research/researchinterest', '/research/projects', '/research/teachingstatement']) ? 'active' : ''}>
             <img src={brainIcon} alt="Icon" /> Research
             <span className="dropdown-icon">&#9662;</span>
-          </NavLink>
-          <ul className="dropdown-menu">
+          </a>
+          <ul className="dropdown-menu" onClick={handleSubMenuClick}>
             <li>
-              <NavLink to="/research/topic1" activeClassName="active">Topic 1</NavLink>
+              <NavLink to="/research/researchinterest" className={isActiveLink('/research/researchinterest') ? 'active' : ''}>Research Interest</NavLink>
             </li>
             <li>
-              <NavLink to="/research/topic2" activeClassName="active">Topic 2</NavLink>
-            </li>
-            <li>
-              <NavLink to="/research/topic3" activeClassName="active">Topic 3</NavLink>
+              <NavLink to="/research/projects" className={isActiveLink('/research/projects') ? 'active' : ''}>Projects</NavLink>
             </li>
           </ul>
         </li>
+
+        <li className={`dropdown ${isTeachingMenuOpen ? 'open' : ''}`}>
+          <a href="#" onClick={toggleTeachingMenu} className={isActiveSubLink(['/teaching/teachingstatement', '/teaching/experience']) ? 'active' : ''}>
+            <img src={teachingIcon} alt="Icon" /> Teaching & Outreach
+            <span className="dropdown-icon">&#9662;</span>
+          </a>
+          <ul className="dropdown-menu" onClick={handleSubMenuClick}>
+            <li>
+              <NavLink to="/teaching/teachingstatement" className={isActiveLink('/teaching/teachingstatement') ? 'active' : ''}>Teaching Statement</NavLink>
+            </li>
+            <li>
+              <NavLink to="/teaching/experience" className={isActiveLink('/teaching/experience') ? 'active' : ''}>Experience</NavLink>
+            </li>
+          </ul>
+        </li>
+
         <li className={`dropdown ${isCVMenuOpen ? 'open' : ''}`}>
-          <NavLink to="/cv" activeClassName="active" onClick={toggleCVMenu}>
+          <a href="#" onClick={toggleCVMenu} className={isActiveSubLink(['/cv#education', '/cv#publications', '/cv#awards', '/cv#skills']) ? 'active' : ''}>
             <img src={resumeIcon} alt="Icon" /> CV
             <span className="dropdown-icon">&#9662;</span>
-          </NavLink>
-          <ul className="dropdown-menu">
-          <li>
-              <NavLink to="/cv" activeClassName="active">Home</NavLink>
+          </a>
+          <ul className="dropdown-menu" onClick={handleSubMenuClick}>
+            <li>
+              <HashLink smooth to="/cv#education" className={isActiveLink('/cv#education') ? 'active' : ''}>Education</HashLink>
             </li>
             <li>
-              <NavLink to="/cv/education" activeClassName="active">Education</NavLink>
+              <HashLink smooth to="/cv#publications" className={isActiveLink('/cv#publications') ? 'active' : ''}>Publications</HashLink>
             </li>
             <li>
-              <NavLink to="/cv/pubs" activeClassName="active">Publications</NavLink>
+              <HashLink smooth to="/cv#awards" className={isActiveLink('/cv#awards') ? 'active' : ''}>Awards & Conferences</HashLink>
             </li>
             <li>
-              <NavLink to="/cv/awards" activeClassName="active">Awards & Conferences</NavLink>
-            </li>
-            <li>
-              <NavLink to="/cv/skills" activeClassName="active">Skills</NavLink>
+              <HashLink smooth to="/cv#skills" className={isActiveLink('/cv#skills') ? 'active' : ''}>Skills</HashLink>
             </li>
           </ul>
         </li>
         <li>
-          <NavLink to="/contact" activeClassName="active">
+          <NavLink to="/contact" className={isActiveLink('/contact') ? 'active' : ''}>
             <img src={emailIcon} alt="Icon" /> Contact
           </NavLink>
         </li>

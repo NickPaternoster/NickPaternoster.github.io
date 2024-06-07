@@ -3,7 +3,8 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import MenuBar from './components/MenuBar';
 import Home from './views/Home';
 import About from './views/About';
-import Research from './views/Research';
+import ResearchInterest from './views/ResearchInterest';
+import Projects from './views/Projects';
 import Cv from './views/Cv';
 import Contact from './views/Contact';
 import Education from './views/Education';
@@ -33,7 +34,8 @@ function App() {
             <Routes>
               <Route path="/" element={<HomeRoute />} />
               <Route path="/about" element={<About />} />
-              <Route path="/research" element={<Research />} />
+              <Route path="/research/researchinterest" element={<ResearchInterest />} />
+              <Route path="/research/projects" element={<Projects />} />
               <Route path="/cv" element={<Cv />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/cv/education" element={<Education />} />

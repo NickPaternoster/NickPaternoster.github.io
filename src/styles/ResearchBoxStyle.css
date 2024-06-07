@@ -1,42 +1,54 @@
 .research-box {
-  width: auto;
-  height: 250px;
+  will-change: transform, opacity, box-shadow; /* Prepare browser for these changes */
+  width: 30vh;
+  height: 30vh;
   background-color: white;
   cursor: pointer;
   padding: 10px;
-  margin: 40px;
+  margin: 20px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition: box-shadow 0.3s ease-out, transform 0.3s ease-out, opacity 0.3s ease-out;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+
 .research-box:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  transform: scale(1.01);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Reduced blur for performance */
+  transform: scale(1.05); /* Slight reduction in scale effect */
+  opacity: 0.9; /* Lighter opacity change for less visual jank */
 }
+
 
 .box-content {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 100%;
+  width: 100%; /* Full width of the parent container */
+  height: 100%; /* Full height of the parent container */
 }
 
 .research-image {
-  max-width: 100%;
-  max-height: 100%;
-  vertical-align: middle;
-  aspect-ratio: 1/1; /* Set a fixed aspect ratio (1:1) for the image */
-  object-fit: contain; /* Ensure the image fits within the container */
+  max-width: 100%; /* Limit width to parent container */
+  max-height: 100%; /* Limit height to parent container */
+  object-fit: contain; /* Ensure the image fits well without being cropped */
+  width: auto; /* Default width is auto to maintain aspect ratio */
+  height: auto; /* Default height is auto to maintain aspect ratio */
 }
 
 .words {
-  flex: 1;
-  text-align: left;
-  margin-left: 20px;
-  margin-top: -13%;
+  position: absolute; /* Keeps the text positioned over the image */
+  top: 50%; /* Moves the top of the text box to the center */
+  left: 50%; /* Moves the left side of the text box to the center */
+  transform: translate(-50%, -50%); /* Centers the text box precisely */
+  padding: 10px; /* Padding around text */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for better readability */
+  width: 90%; /* Slightly less than full width to ensure padding does not push it out of the box */
+  text-align: center; /* Center the text within the box */
   font-weight: bold;
-  font-size: 150%;
-  border-bottom: 1px solid black;
+  font-size: 1.5vh; /* Scaled font size */
+  border: none; /* Removes any borders */
 }

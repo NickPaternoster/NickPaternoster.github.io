@@ -21,9 +21,11 @@ const ModalComponent = ({
       alignItems: 'center',
       justifyContent: 'flex-start', // Align content to the top vertically
       textAlign: 'center',
+      zIndex: 1001, // High z-index for the modal content
     },
     overlay: {
       backgroundColor: 'rgba(0, 0, 0, 0.5)',
+      zIndex: 1001, // High z-index for the modal content
     },
   };
 
@@ -46,7 +48,6 @@ const ModalComponent = ({
     marginTop: '0.5%',
     marginBottom: '5px',
     width: '90%',
-    border: '1px solid black'
   };
 
   const skillLevelTextStyles = {
@@ -81,7 +82,6 @@ const ModalComponent = ({
   };
 
   const titleContainerStyles = {
-    border: '1px solid black',
     width: '90%',
     display: 'flex',
     alignItems: 'center',
@@ -98,6 +98,7 @@ const ModalComponent = ({
 
   return (
     <Modal
+    
       isOpen={isOpen}
       onRequestClose={closeModal}
       style={customModalStyles}

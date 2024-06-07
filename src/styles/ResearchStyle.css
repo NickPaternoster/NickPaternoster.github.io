@@ -1,0 +1,59 @@
+.research-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* This ensures the container takes the full height of the viewport */
+  }
+  
+  .research-box {
+    width: 30vh;
+    height: 30vh;
+    background-color: white;
+    cursor: pointer;
+    padding: 10px;
+    margin: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .research-box:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.01);
+  }
+  
+  .box-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .research-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    width: auto;
+    height: auto;
+  }
+  
+  .words {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 90%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5vh;
+    border: none;
+  }
+  

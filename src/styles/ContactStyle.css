@@ -1,58 +1,124 @@
 .contact-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Set the height of the container to the full viewport height */
-  }
-  
-  .contact-container button {
-    margin-bottom: 10px; /* Add some space between the button and images */
-    margin-top: 2%;
-    border-radius: 50px;
-    padding: 10px 20px;
-    border: 1px solid black; /* Set the border style, width, and color */
-    background-color: transparent;
-    color: black;
-    font-weight: bold;
-    font-size: 15px;
-    width: 13%;
-    transition: transform 0.2s ease-in-out; /* Add transition effect */
-    font-family: 'Merriweather', serif;
-  }
-  
-  .contact-container button:hover {
-    opacity: 0.7; /* Reduce the opacity on hover */
-    cursor: pointer;
-    transform: scale(1.1);
-  }
-  
-  .contact-container button:active {
-    background-color: #888888; /* Adjust the color to your preference */
-  }
-  
-  .contact-container .image-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .contact-container .image-container a {
-    margin-right: 10px; /* Add some space between the images */
-  }
-  
-  .contact-container .image-container a:last-child {
-    margin-bottom: 0; /* Remove bottom margin for the last image */
-  }
-  
-  .contact-container .image-container img {
-    width: 50px; /* Adjust the width to the desired size */
-    height: 50px; /* Adjust the height to the desired size */
-    transition: transform 0.2s ease-in-out; /* Add transition effect */
-  }
-  
-  .contact-container .image-container img:hover {
-    opacity: 0.7; /* Reduce the opacity on hover */
-    cursor: pointer;
-    transform: translateY(-5px); /* Move the image up by 5 pixels */
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set the height of the container to the full viewport height */
+  background-color: white;
+}
+
+.contact-container p {
+  font-size: 6vh; /* Adjust the font size to make it larger */
+  font-weight: bold; /* Make the text bold */
+  margin-bottom: 2vh; /* Converted px to vh */
+  color: black; /* Adjust the color as needed */
+}
+
+.contact-container .email-text {
+  font-size: 3vh; /* Set a smaller font size for the email text */
+  margin-bottom: 2vh; /* Converted px to vh */
+  color: black; /* Adjust the color as needed */
+  font-weight: lighter;
+}
+
+.contact-container .form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Full width of the container */
+}
+
+.contact-container .input-field {
+  width: 70%; /* Adjust width for name and email fields */
+  padding: 1vh;
+  margin-bottom: 1vh; /* Responsive spacing */
+  border: 0.1vh solid #ccc;
+  border-radius: 0.5vh;
+  font-size: 2vh; /* Font size in vh */
+}
+
+.contact-container .message-box {
+  width: 70%; /* Consistent width with other input fields */
+  height: 15vh; /* Larger height for message box */
+  padding: 1vh;
+  margin-bottom: 2vh; /* Responsive spacing */
+  border: 0.1vh solid #ccc;
+  border-radius: 0.5vh;
+  font-size: 2vh; /* Font size in vh */
+  resize: none; /* Prevent resizing */
+}
+
+.contact-container button {
+  margin-bottom: 5vh; /* Converted px to vh */
+  margin-top: 1%;
+  border-radius: 2.5vh; /* Converted px to vh */
+  padding: 1vh 2vh; /* Converted px to vh */
+  border: 0vh solid black; /* Border style, width, and color */
+  background-color: #4285F4;
+  color: white;
+  font-size: 2vh; /* Converted px to vh */
+  width: 25vh;
+  transition: transform 0.2s ease-in-out; /* Add transition effect */
+  font-family: 'Merriweather', serif;
+}
+
+.contact-container button:hover {
+  opacity: 0.7; /* Reduce the opacity on hover */
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.contact-container button:active {
+  background-color: #888888; /* Adjust the color to your preference */
+}
+
+.contact-container .image-container {
+  display: flex;
+  align-items: center;
+}
+
+.contact-container .image-container a {
+  margin-right: 1vh; /* Converted px to vh */
+}
+
+.contact-container .image-container a:last-child {
+  margin-bottom: 0; /* Remove bottom margin for the last image */
+}
+
+.contact-container .image-container img {
+  width: 5vh; /* Converted px to vh */
+  height: 5vh; /* Converted px to vh */
+  transition: transform 0.2s ease-in-out; /* Add transition effect */
+}
+
+.contact-container .image-container img:hover {
+  opacity: 0.7; /* Reduce the opacity on hover */
+  cursor: pointer;
+  transform: translateY(-0.5vh); /* Converted px to vh */
+}
+
+.contact-container button:disabled {
+  background-color: #ccc; /* Grey background for disabled state */
+  color: #666; /* Darker text color to indicate it is disabled */
+  cursor: not-allowed; /* Cursor to indicate the button is not clickable */
+}
+
+.checkbox-group label {
+  display: block; /* Makes each label+checkbox appear on a new line */
+}
+
+/* Adjustments for the checkbox layout */
+.checkbox-group {
+  display: flex;
+  gap: 2vh;
+  font-size: 2vh;
+
+}
+.reason-for-request {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+
