@@ -8,6 +8,7 @@ import brainIcon from '../images/brain.png';
 import resumeIcon from '../images/resume.png';
 import emailIcon from '../images/email.png';
 import teachingIcon from '../images/teaching.png';
+import blogIcon from '../images/blog.png';
 
 function MenuBar() {
   const location = useLocation();
@@ -114,6 +115,12 @@ function MenuBar() {
             </li>
           </ul>
         </li>
+        <li>
+          <NavLink exact to="/blog" className={isActiveLink('/blog') ? 'active' : ''}>
+            <img src={blogIcon} alt="Icon" /> Blog
+          </NavLink>
+        </li>
+
         <li>
           <NavLink to="/contact" className={isActiveLink('/contact') ? 'active' : ''}>
             <img src={emailIcon} alt="Icon" /> Contact

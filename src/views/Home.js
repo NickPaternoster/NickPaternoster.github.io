@@ -14,7 +14,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={`home-container ${isHome ? 'home' : ''}`}>
+    <div className={`home-container ${isHome ? 'home' : ''}${shouldFadeIn ? 'fade-in' : ''}`}>
       {isHome && (
         <>
         <img src={backgroundImage} alt="Background" className="centered-image" />

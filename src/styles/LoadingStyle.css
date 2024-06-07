@@ -1,0 +1,36 @@
+.loading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #171717; /* Light gray background */
+}
+
+.loading-spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150%; /* Full width to accommodate all waves */
+    max-width: 100%; /* Adjust this to contain the wave pattern within a reasonable width */
+    overflow: hidden; /* Ensures nothing spills out of the spinner width */
+}
+
+.wave {
+    width: 0.5vh; /* Reduce width to make each bar thinner */
+    height: calc(20vh * var(--scale)); /* Scale initial height according to its static scale */
+    background-color: #F4B142; /* Color of the waves */
+    margin: 2vh; /* Margin between bars */
+    transform-origin: 50% 50%; /* Center the scaling effect */
+    animation: wave-animation 1.5s infinite ease-in-out; /* Animation duration */
+    animation-delay: var(--delay); /* Use CSS variable for delay */
+}
+
+@keyframes wave-animation {
+    0%, 100% {
+      transform: scaleY(0.8); /* Normal state */
+    }
+    50% {
+      transform: scaleY(1.5); /* Slightly increase scale at peak */
+    }
+}

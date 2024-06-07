@@ -2,47 +2,57 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Center items vertically */
+  justify-content: center;
   padding: 20px;
-  height: 100vh; /* Full height of the viewport */
+  height: 100vh;
+  width: 100vw;
   background-color: #f9f9f9;
 }
 
 .education-header {
   font-weight: bold;
-  font-size: 2em; /* Adjust the size as needed */
-  margin-bottom: 20px; /* Add some spacing below the header */
+  font-size: 2em;
+  margin-bottom: 20px;
 }
 
 .education-item {
   display: flex;
-  align-items: center; /* Center items vertically */
+  align-items: center;
   margin: 20px 0;
-  width: 80%; /* Adjust width as needed */
-  background-color: #fff; /* Background color for the container */
-  padding: 20px; /* Padding around the container */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for the container */
-  transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition effects */
+  width: 80%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-
 .education-seal {
-  max-width: 150px; /* Adjust the size as needed */
-  margin-right: 20px; /* Space between the seal and the text */
+  max-width: 150px;
+  margin-right: 20px;
 }
 
 .text-content {
-  padding: 15px; /* Add padding around text */
+  padding: 15px;
 }
 
 .education-title {
   font-size: 1.5em;
   font-weight: bold;
-  margin-bottom: 10px; /* Space below the title */
+  margin-bottom: 10px;
 }
 
 p {
-  margin: 5px 0; /* Adjust margins for paragraph spacing */
-  line-height: 1.6; /* Better line spacing for readability */
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+.hover-link {
+  color: black; /* Color of the link */
+  text-decoration: none; /* No underline */
+  transition: color 0.3s, text-decoration 0.3s; /* Smooth transition for hover effects */
+}
+
+.hover-link:hover {
+  color: #F4B142; /* Change color on hover */
 }

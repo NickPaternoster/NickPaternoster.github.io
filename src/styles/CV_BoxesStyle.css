@@ -7,7 +7,7 @@
   gap: 0%;
   min-height: 100vh; /* Ensure it takes the full height of the viewport */
   margin: -0.25% 10; /* Adjust the negative margin to compensate for the gaps */
-  background-color: white; /* Add background color for clarity */
+  background-color: #f9f9f9; /* Add background color for clarity */
   
 }
 

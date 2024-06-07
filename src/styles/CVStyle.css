@@ -1,11 +1,12 @@
-.text-resume {
+.text-resume { /* I assume this class is used in each section and already contains specific styles */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100vh; /* Ensures each section takes up full viewport height */
   position: relative;
+  scroll-snap-align: start; /* This will handle snapping */
 }
-  
+
   .section-selection {
     display: flex;
     flex-direction: row;
@@ -13,7 +14,7 @@
     align-items: center;
     font-weight: bolder;
     width: 100%;
-    color: white;
+    color: #f9f9f9;
     position: absolute;
     left: 0px; /* Adjust as needed */
     right: 10px; /* Adjust as needed */
@@ -58,3 +59,10 @@
     background-color: #0f0f0f; /* Darken on click */
   }
  
+  #cv-container {
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Enables vertical scrolling */
+    scroll-snap-type: y mandatory; /* Enables vertical snapping */
+    background-color: #f9f9f9;
+  }
+  

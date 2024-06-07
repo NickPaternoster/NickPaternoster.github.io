@@ -7,17 +7,17 @@ import '../styles/CVStyle.css';
 
 const CVPage = () => {
   return (
-    <div>
-      <section id="education">
+    <div id="cv-container">
+      <section className="text-resume" id="education">
         <Education />
       </section>
-      <section id="publications">
+      <section className="text-resume" id="publications">
         <Pubs />
       </section>
-      <section id="awards">
+      <section className="text-resume" id="awards">
         <Awards />
       </section>
-      <section id="skills">
+      <section className="text-resume" id="skills">
         <Skills />
       </section>
     </div>

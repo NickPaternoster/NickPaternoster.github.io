@@ -7,22 +7,27 @@ export default function About() {
       <div className="about-text">
         <h1>Cognitive Neuroscientist | Cornell University</h1>
         <p>Hi!</p>
-        <p>My name is Nick and I'm a second year Ph.D. student in the Attention, Memory, & Perception lab under Khena Swallow at Cornell
-          University.
+        <br></br>
+        <p>My name is Nick, and I'm a second-year Ph.D. student in the Attention, Memory, & Perception (AMP) Lab at Cornell University, under Professor Khena Swallow. I graduated in 2023 from the University of Central Arkansas with a bachelor’s degree in computer science and a minor in cognitive neuroscience.
         </p>
-        <p>In 2023 I graduate from the University of Central Arkansas with a bachelors majoring in computer science and minoring in cognitive science. During my time 
-          at UCA I became involved in the Perceptual Cognitive Neuroscience lab headed by Dr. Amrita Puri and it is during my stint as an undergraduate research assistant that
-          I found a passion for investigating perception and the brain. The research I assisted with was primarily investigating numerical cognition (the size congruity effect) and
-          human echolocation, a project that was guided by one of my mentors Dr. Santani Teng at the Smith-Kettlewell Eye Research Institute. 
+        <br></br>
+        <p>My journey into neuroscience began during my freshman year at UCA, where an assignment to critique an academic paper led me to 'Development of Cortical Circuitry and Cognitive Function' by Patricia S. Goldman-Rakic. This paper significantly shaped my academic direction, and I largely credit it with the initial development of my fascination with cognitive neuroscience. 
         </p>
+        <br></br>
         <p>
-          Outside of the lab I interned at a number of companies, where I was able to work as a professional software engineer. Gaining familarity with modern tech stacks, version control techniques, and 
-          industry standard workflow management. I was also employed as a teachning assistant where I led lab sessions for the introductory C++ course at the university. 
-          During my time at UCA I was able to spend some time becoming familiar with modern machine learning techniques.
+        From that initial reading, my research focus evolved, and I eventually joined the Perceptual & Cognitive Neuroscience lab headed by Dr. Amrita Puri. The research I assisted with during this time was focused on numerical/semantic cognition (the size congruity effect) and human echolocation, a separate project that was guided by Dr. Santani Teng at the Smith-Kettlewell Eye Research Institute. 
         </p>
+        <br></br>
         <p>
-          Linking my industry experience with my research in I joined the AMP lab in 2023, where I now utilize machine learning to model human cognition and perception. 
-          If you're interested in my work you can read more about it here! 
+        Alongside my academic pursuits, I gained experience as a software engineer through internships, where I worked with modern tech stacks, learned version control at a professional level, and was exposed to large scale systems workflow management styles. I also served as a TA for our introductory C++ courses, which allowed me to refine my teaching skills through leading laboratory sessions. 
+          </p>
+          <br></br>
+          <p>
+          As I continued on throughout my undergraduate career, my research focus began shifting from generally being interested in cognitive phenomena to asking questions about information processing and the visual system. Seeking to answer these questions and utilize my computational background I applied to the AMP lab at Cornell University at the end of my junior year. 
+          </p>
+<br></br>
+          <p>
+          Now, at the AMP lab I apply machine learning techniques to model visual processing both at the neural and cognitive level. If you're interested in learning more about my work, click here! 
           </p>
       </div>
     </div>

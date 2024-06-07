@@ -5,7 +5,7 @@
   justify-content: center; /* Center vertically */
   min-height: 100vh; /* Ensure it takes the full height of the viewport */
   overflow: auto;
-  background-color: white;
+  background-color: #f9f9f9;
   padding: 20px;
 }
 
@@ -45,13 +45,13 @@
   margin-top: 2%;
   border-radius: 50px;
   padding: 10px 20px;
-  border: 1px solid black;
   background-color: transparent;
-  color: black;
+  color: white;
   font-weight: bold;
   transition: transform 0.2s ease-in-out, background-color 0.3s ease;
   font-size: 15px;
   text-decoration: none; /* Remove underline */
+  background-color: #F4B142;
 }
 
 .button-below:hover {
@@ -62,4 +62,32 @@
 
 .button-below:active {
   background-color: #888888;
+}
+
+award-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.award-images {
+  display: flex;
+  justify-content: space-around;
+}
+
+.award-image {
+  width: 13vw; /* Adjust as necessary */
+  height: 20vh; /* Adjust as necessary */
+  margin-bottom: 5px; /* Space between image and dropdown */
+}
+
+.dropdown-content {
+  width: 80%; /* Adjust width as needed */
+  text-align: center;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 10px;
+  margin-top: 5px; /* Ensures space between image and dropdown */
 }
