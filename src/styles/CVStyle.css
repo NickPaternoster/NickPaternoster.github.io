@@ -2,9 +2,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Ensures each section takes up full viewport height */
+  min-height: 100vh;
   position: relative;
-  scroll-snap-align: start; /* This will handle snapping */
+  border-bottom: 2px solid #ccc;
+}
+/* Applies a dark background color to every odd-numbered section */
+.text-resume:nth-child(even) {
+  background-color: #4285f4;
+}
+
+/* Specific styling for the first section if needed */
+.text-resume:last-child {
+  background-color: #4285f4; /* Ensures the first section has the specified dark background */
 }
 
   .section-selection {

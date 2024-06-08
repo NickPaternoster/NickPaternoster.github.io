@@ -6,13 +6,13 @@
   padding: 20px;
   height: 100vh;
   width: 100vw;
-  background-color: #f9f9f9;
 }
 
 .education-header {
   font-weight: bold;
   font-size: 2em;
   margin-bottom: 20px;
+  color: black;
 }
 
 .education-item {

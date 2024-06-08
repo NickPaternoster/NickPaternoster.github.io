@@ -2,7 +2,6 @@
   will-change: transform, opacity, box-shadow; /* Prepare browser for these changes */
   width: 30vh;
   height: 30vh;
-  background-color: white;
   cursor: pointer;
   padding: 10px;
   margin: 20px;
